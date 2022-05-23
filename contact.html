@@ -10,9 +10,9 @@
                 <h1 class = "Name">Erick Gulyan</h1>
                 <nav>
                     <ul>
-                        <li><a href = "index.html">Home</a></li>
-                        <li><a href = "about.html">About</a></li>
-                        <li><a href = "contact.html">Contact</a></li>
+                        <li><a href = "index.html" class = "btn btn-outline">Home</a></li>
+                        <li><a href = "about.html" class = "btn btn-outline">About</a></li>
+                        <li><a href = "contact.html" class = "btn btn-outline" >Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -20,26 +20,36 @@
         <section class="showcase">
              <div class="container grid">
                 <div class="showcase-text">
-                    <h1>Contact Page</h1>
-                    <p>If you would like to contact me, please fill out the form on the right.</p>
-                    <h4>I am always open to collaboration!</h4>
+                    <h2>If you would like to contact me, please fill out the form on the right.</h2>
+                    <h3>I am always open to collaboration!</h4>
                     
                 </div>
                 <div class="showcase-form card">
                     <h2>Contact Erick</h2>
                     <form>
                         <div class="form-control">
-                           <input type="text" name="name" placeholder="Name" required>
+                           <input id = "name" type="text" placeholder="Name" required>
                         </div>
                         
                         <div class="form-control">
-                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="email" id="email" placeholder="Email" required>
                         </div>
                         <div class="form-control">
-                            <input type="text" name="inquiry" placeholder="Inquiry" optional>
+                            <input type="text" id="inquiry" placeholder="Inquiry" required>
                          </div>
-                        <input type="submit" value="Send" class="btn btn-primary">
-                        
+                        <input type="submit"  id = "send" value="Send" class="btn btn-primary">
+
+                        <script type="text/javascript">
+                           var nameInput = document.getElementById('name');
+
+                            document.querySelector('form.pure-form').addEventListener('submit', function (e) {
+
+                                //prevent the normal submission of the form
+                                
+
+                                console.log(nameInput.value);    
+                            });
+                          </script>
                     </form>
                 </div>
             </div>
